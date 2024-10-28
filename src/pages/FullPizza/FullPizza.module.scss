@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.pizzaImage {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.pizzaImage:hover {
+  transform: rotate(-2deg);
+}
+
+.pizzaInfo {
+  max-width: 450px;
+  text-align: left;
+}
+
+.pizzaInfo h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pizzaInfo p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.pizzaInfo span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fe5f1e;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .pizzaImage {
+    max-width: 100%;
+  }
+
+  .pizzaInfo {
+    text-align: center;
+  }
+
+  .pizzaInfo h2 {
+    font-size: 2rem;
+  }
+
+  .pizzaInfo p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .pizzaInfo h2 {
+    font-size: 1.8rem;
+  }
+
+  .pizzaInfo p {
+    font-size: 1rem;
+  }
+}
